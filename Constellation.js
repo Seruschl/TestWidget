@@ -33,7 +33,7 @@ function getwidget(total, haveGone, str) {
       break;
     case "Beidou":
       mainColor = new Color("#71bbd4")
-	  case "Bennett":
+    case "Bennett":
       mainColor = new Color("#71bbd4");
       break;
     case "Chongyun":
