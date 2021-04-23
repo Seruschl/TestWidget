@@ -10,19 +10,25 @@ w.backgroundColor=new Color("#222222")
 const now = new Date()
 const weekday = now.getDay() == 0 ? 6 : now.getDay() - 1
 const minutes=now.getMinutes() 
-
-getwidget(6, 1, "Amber")
-getwidget(6, 6, "Barbara")
-getwidget(6, 2, "Beidou")
-getwidget(6, 4, "Bennett")
-getwidget(6, 1, "Chongyun")
-getwidget(6, 4, "Diona")
+let main = w.addStack()
+let left = main.addStack()
+main.addSpacer()
+let right = main.addStack()
+main.layoutHorizontally()
+left.layoutVertically()
+right.layoutVertically()
+getwidget(6, 1, "Amber",left)
+getwidget(6, 6, "Barbara",left)
+getwidget(6, 2, "Beidou",left)
+getwidget(6, 4, "Bennett",right)
+getwidget(6, 1, "Chongyun",right)
+getwidget(6, 4, "Diona",right)
 
 Script.setWidget(w)
 Script.complete()
 w.presentLarge()
 
-function getwidget(total, haveGone, str) {
+function getwidget(total, haveGone, str,stack) {
   
   switch (str) {
     case "Amber":
@@ -42,18 +48,18 @@ function getwidget(total, haveGone, str) {
     case "Diona":
       mainColor = new Color("#71bbd4")
   }
-  const titlew = w.addText(str, haveGone + "/" + total)
+  const titlew = stack.addText(str, haveGone + "/" + total)
   titlew.textColor = mainColor
   titlew.font = Font.boldSystemFont(10)
   
-  const titleee = w.addText(haveGone + "/" + total)
+  const titleee = stack.addText(haveGone + "/" + total)
   titleee.textColor = new Color("#ffffff")
   titleee.font = Font.boldSystemFont(10)
 
-  w.addSpacer(5)
-  const imgw = w.addImage(creatProgress(total,haveGone))
+  stack.addSpacer(5)
+  const imgw = stack.addImage(creatProgress(total,haveGone))
   imgw.imageSize=new Size(width, h)
-  w.addSpacer(6)
+  stack.addSpacer(6)
 }
 
 
