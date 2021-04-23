@@ -2,36 +2,6 @@
 // These must be at the very top of the file. Do not edit.
 // icon-color: deep-purple; icon-glyph: magic;
 
-
-// Set to true for an image background, false for no image.
-//const imageBackground = true;
-
-// Set to true to reset the widget's background image.
-//const forceImageUpdate = false;
-
-// The URL of your JSON endpoint// 
-// const endpoint = "https://spreadsheets.google.com/feeds/cells/1gq8DhOg3tjKK5gIP_8a-eUD7nvdn7EqLsnCjfgWFXmI/7/public/full?alt=json"
-
-// Function that performs the request to the JSON endpoint
-// async function loadItems() {
-// 	let at = endpoint
-// 	let req = new Request(at)
-// 	let corpo = await req.loadJSON()
-// 	// We return just the cells
-// 	return corpo.feed.entry
-// }
-
-// Request the spreadsheet data
-// let json = await loadItems()
-// 
-// amber = json[346].content["$t"]
-// barbara = json[347].content["$t"]
-// beidou = json[348].content["$t"]
-// bennett = json[349].content["$t"]
-// chongyun = json[350].content["$t"]
-// diona = json[351].content["$t"]
-// log(amber)
-// progress
 const width=125
 const h=5
 const w = new ListWidget()
